@@ -6,8 +6,8 @@ services:
     container_name: python_dev_container # 起動のたびに名前が変わらないように固定する
     build: . # Dockerfileの場所
     volumes:
-      - ~/src/container/python_dev_container:/bindmount:z # ホスト側のディレクトリ : コンテナのディレクトリ : SELinux用のラベル(z)
-    working_dir: /bindmount # 起動時のカレントディレクトリ
+      - ~/src/container/python_dev_container/workspace:/workspace:z # ホスト側のディレクトリ : コンテナのディレクトリ : SELinux用のラベル(z)
+    working_dir: /workspace # 起動時のカレントディレクトリ
     ports:
       - "8000:8000"
     init: true
