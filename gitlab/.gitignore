@@ -1,0 +1,3 @@
+# GitLab persistent data (contains secrets, never commit)
+data/
+workspace/
